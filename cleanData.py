@@ -15,18 +15,22 @@ df = df.drop(columnsdf[2], axis=1)
 
 
 # %%
-df = df.dropna(axis=0).reset_index()
+df = df.dropna(axis=0)
 
 # %%
-#header = [columnsdf[0], columnsdf[1]]
-df.to_csv('mh2301120Hertz.csv', index=False)
+header0 = [columnsdf[0], 'Mass/g']
+df.to_csv('/home/michael/CSF/CSF/FigurePrepFiles/mh2301120Hertz.csv',header=header0,index=False)
 
 
 # %%
 df3 = read()
-df4 = df.drop(columnsdf[1], axis=1, inplace=True)  # do you mean to drop on df or df3?
-df5 = df.dropna(axis=0, inplace=True).reset_index()
 # %%
-#header1 = [columnsdf[0], columnsdf[2]]
-df5.to_csv('mh2301123Hertz.csv', index=False)
+df3.head
+
+# %%
+df3 = df3.drop(columnsdf[1], axis=1) # do you mean to drop on df or df3?
+df3 = df3.dropna(axis=0)
+# %%
+header1 = [columnsdf[0], 'Mass/g']
+df3.to_csv('/home/michael/CSF/CSF/FigurePrepFiles/mh2301123Hertz.csv',header=header1,index=False)
 # %%
