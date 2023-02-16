@@ -9,7 +9,7 @@ df = read()
 df.head
 # %%
 
-columnsdf = ['Time to Measuement/s', 'Mass/g (0Hz)', 'Mass/g(3 Hz)']
+columnsdf = ['#Time to Measuement/s', 'Mass/g (0Hz)', 'Mass/g(3 Hz)']
 
 df = df.drop(columnsdf[2], axis=1)
 
